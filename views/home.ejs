@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> </title>
+    <script src="https://kit.fontawesome.com/595caf6da5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <h1 id = "page-heading">
+        <i class="fa-solid fa-address-book"></i>
+        My Contact List
+    </h1>
+    <ul id = "list">
+        <% for (let i of contact_list) { %>
+            <li class = "Contact">
+                <div class = "outer-container">
+                    <div class = "details">
+                        <p class = "p1"> <%= i.name %> </p>
+                        <p class = "p2"> <%= i.phone %> </p>
+                    </div>
+    
+                    <div class = "delete-button">
+                        <!-- the url mentioned in the href should not contain spaces -->
+                        <a href = "/delete-contact/?id=<%= i._id %>">
+                            <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </li>
+        <% } %>
+    </ul>
+    <form action = "/create-contact" method = "POST">
+        <input type= "text" name = "name" placeholder="Name" required>
+        <input type= "number" name= "phone" placeholder="Phone" required>
+        <button type = "submit">Add</button>
+    </form>
+</body>
+</html>

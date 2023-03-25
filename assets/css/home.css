@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+#page-heading {
+    text-align: center;
+    color: grey;
+}
+#list {
+    margin-left: -30px;
+}
+.outer-container {
+    display: flex;
+    background-color: orange;
+    margin-bottom: 5px;
+}
+.outer-container i {
+    text-align: center;
+    margin-top: 16px;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+}
+#list .details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 85%;
+}
+.outer-container:hover {
+    background-color: grey;
+}
+#list li {
+    width: 25%;
+    background-color: white;
+    color: white;
+    margin: auto;
+}
+.delete-button {
+    width: 9%;
+}
+#list {
+    list-style: none;
+}
+#list p{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form input{
+    border: 0;
+    border-bottom: 1px solid black;
+}
+form button {
+    padding: 4px 16px;
+    background-color: grey;
+    color: white;
+    border: 0;
+}
